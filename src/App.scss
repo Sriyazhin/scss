@@ -1,0 +1,98 @@
+@import 'variables';
+
+.maindiv{
+  @include alignment;
+  background-color: $primary-color;
+}
+
+.Logo{
+  @include alignment;
+  margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+  .forimage{
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    opacity: 0.5;
+    @extend .foropacity;
+  }
+
+  @if $border == top{
+    border-top: $border-image;
+  }
+  @else if $border == left{
+    border-left: $border-image;
+  }
+  @else if $border == right{
+    border-right: $border-image;
+  }
+  @else if $border == bottom{
+    border-bottom: $border-image;
+  }
+}
+
+.forlinks{
+  color: $word-color;
+  margin-left: 760px;
+  font-size: $link-size*17;
+
+  @include alignments(center);
+
+  .boxtwo{
+    &:hover{
+      color: gold;
+    }
+  }
+  .boxthree{
+    @extend .forlinkandhover;
+  }
+  .boxfour{
+    @extend .forlinkandhover;
+  }
+  .boxfive{
+    @extend .forlinkandhover;
+  }
+  .boxsix{
+    @extend .forlinkandhover;
+  }
+}
+
+.subdiv{
+  background-color: $sub-color;
+  padding-top: $padding-base*2.8;
+  padding-bottom: $padding-base*2.8;
+  padding-right: $padding-base*75;
+
+  .#{$colorone}{
+    color: $colorone;
+  }
+  .#{$colortwo}{
+    color: $colortwo;
+    margin-top: $margin-base*4;
+  }
+  .#{$colorthree}{
+    color: $colorthree;
+    margin-top: $margin-base*4;
+  }
+  .buttonone{
+    @extend %button-base;
+    background-color: $colorone;
+    opacity: 0.7;
+      @extend .foropacity;
+  }
+  .buttontwo{
+    @extend %button-base;
+    background-color: $colortwo;
+    opacity: 0.7;
+    @extend .foropacity;
+  }
+  .buttonthree{
+    @extend %button-base;
+    background-color: $colorthree;
+    opacity: 0.7;
+    @extend .foropacity;
+  }
+}

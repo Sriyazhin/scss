@@ -1,0 +1,10 @@
+.foropacity:hover {
+  opacity: 1;
+}
+
+.forlinkandhover {
+  margin-left: 50px;
+}
+.forlinkandhover:hover {
+  color: gold;
+}/*# sourceMappingURL=variables.css.map */

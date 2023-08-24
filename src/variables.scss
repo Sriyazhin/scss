@@ -1,0 +1,38 @@
+$primary-color: black;
+$sub-color:rgb(0,0,0,0.1);
+$word-color: white;
+$colorone:red;
+$colortwo:blue;
+$colorthree: green;
+$link-size: 1px;
+$margin-base: 5px;
+$padding-base: 10px;
+$border: bottom;
+$border-image: 1px solid $word-color;
+
+@mixin alignments($valuehere){
+display: flex;
+justify-content: $valuehere;
+}
+@mixin alignment{
+    display: flex;
+    align-items: center;
+    }
+.foropacity{
+    &:hover{
+        opacity: 1;
+      }
+}
+.forlinkandhover{
+    
+    margin-left: $margin-base*10;
+    &:hover{
+      color: gold;
+    }
+}
+%button-base{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    margin-top: $margin-base;
+  }
